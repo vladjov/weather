@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Weather</h1>
+			<!-- <div class="menu"></div> -->
+		</header>
+		<div class="weatherLocation">
+			<div class="locationSearch">
+				<p>Weather data for current location: </p>
+				<div class="currentBtn"><img src="icons/png/location.png" alt=""></div>	
+			</div>
+			<div class="citySearch">
+				<input id="cityName" type="text">
+				<div class="citySearchBtn"><img src="icons/png/search1.png" alt=""></div>
+			</div>
+		</div>
+		<div class="notification"><p></p></div>
+		<div class="weatherContainer">
+			<div class="weatherMain">
+				<div class="weatherIcon"><img src="" alt=""></div>
+				<div class="weatherInfo">
+					<div class="temperatureValue"><p><span></span></p></div>
+					<div class="temperatureDescription"><p></p></div>
+					<div class="location"><p></p></div>
+					<div class="timeAndDate"><p></p></div>
+				</div>	
+			</div>
+			<p>Details:</p>
+			<div class="details">
+				<div class="feelsLike"><p></p></div>
+				<div class="pressure"><p></p></div>
+				<div class="wind"><p></p></div>
+				<div class="humidity"><p></p></div>
+			</div>
+			<p>Next 24h:</p>			
+			<div class="forecastDiv">
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
