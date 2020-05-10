@@ -59,6 +59,7 @@ h1 {
 	display: flex;
 	margin-bottom: 3em;
 }
+
 .weatherInfo {
   padding-left: 2em;	
 }
@@ -66,11 +67,13 @@ h1 {
 .temperatureValue {
   font-size: xx-large;
 }
+
 .details {
 	display: block;
 	width: inherit;
 	
 }
+
 .details p {
 	padding: 1em;
 	display: flex;
