@@ -7,45 +7,127 @@
 </head>
 <body>
 	<div class="container">
+		<div class="splash">
+			<h1 class="fadeIn">Weather App<sup><img src="icons/png/256x256/02n.png" alt=""></sup></h1>
+		</div>
 		<header>
 			<h1>Weather</h1>
-			<!-- <div class="menu"></div> -->
 		</header>
 		<div class="weatherLocation">
 			<div class="locationSearch">
 				<p>Weather data for current location: </p>
-				<div class="currentBtn"><img src="icons/png/location.png" alt=""></div>	
+				<div class="currentBtn"><img src="icons/svg/map-pin.svg" alt=""></div>	
 			</div>
 			<div class="citySearch">
 				<input id="cityName" type="text">
-				<div class="citySearchBtn"><img src="icons/png/search1.png" alt=""></div>
+				<div class="citySearchBtn"><img src="icons/svg/search.svg" alt=""></div>
 			</div>
 		</div>
 		<div class="notification"><p></p></div>
 		<div class="weatherContainer">
 			<div class="weatherMain">
-				<div class="weatherIcon"><img src="" alt=""></div>
+				<div class="weatherIcon">
+					<div class="weatherIconInner"></div>
+					<div class="weatherIconInfo">
+						<div class="temperatureValue"><p><span></span></p></div>
+						<div class="temperatureDescription"><p></p></div>
+					</div>
+				</div>
 				<div class="weatherInfo">
-					<div class="temperatureValue"><p><span></span></p></div>
-					<div class="temperatureDescription"><p></p></div>
 					<div class="location"><p></p></div>
 					<div class="timeAndDate"><p></p></div>
-				</div>	
+					<div class="sunrise"><p></p></div>
+					<div class="sunset"><p></p></div>
+				</div>
 			</div>
-			<p>Details:</p>
-			<div class="details">
-				<div class="feelsLike"><p></p></div>
-				<div class="pressure"><p></p></div>
-				<div class="wind"><p></p></div>
-				<div class="humidity"><p></p></div>
+			<div class="toggleUnit">
+				<h2>Toggle Unit</h2>
+				<p>C</p>
+				<label class="label" id="toggleButton">
+					<div class="toggle">
+					<input class="toggle-state" type="checkbox" name="check" value="check" />
+					<div class="indicatorToggle"></div>
+					</div>
+				</label>
+				<p>F</p>
 			</div>
-			<p>Next 24h:</p>			
-			<div class="forecastDiv">
+			<div class="showDetailsBtn"><p>Details</p><img src="icons/svg/chevron-down.svg" alt=""></div>
+			<ul class="details"  style="display: block">
+				<li class="feelsLike"></li>
+				<li class="pressure"></li>
+				<li class="wind"></li>
+				<li class="humidity"></li>
+			</ul>
+			<div class="next24hBtn"><p>Next 24h</p><img src="icons/svg/chevron-down.svg" alt=""></div>
+			<div class="forecastDiv" style="display: block">
+				<ul id="forecastList">
+				</ul>
+			</div>
+			
+			<div class="favoritesBtn"><p>Favorites</p><img src="icons/svg/chevron-down.svg" alt=""></div>
+			<div class="citiesAdded" style="display: block">
+				<ul id="listOfCities"></ul>
+			</div>
+			
+			<div class="frequencyBtn"><p>Frequency</p><img src="icons/svg/chevron-down.svg" alt=""></div>
+			<div class="updateFrequencyWrapper"  style="display: block">
+				<div class="updateFrequency">
+					<div class="wrapper">
+						<input class="state" type="radio" name="app" id="a" value= 60>
+						<label class="label" for="a">
+					    	<span class="text">Every hour</span>
+							<div class="indicator"></div>
+					    </label>
+					</div>
+					<div class="wrapper">
+					    <input class="state" type="radio" name="app" id="b" value=120>
+					    <label class="label" for="b">
+					    	<span class="text">Every 2 hours</span>
+					    	<div class="indicator"></div>
+					    </label>
+					</div>
+					<div class="wrapper">
+					    <input class="state" type="radio" name="app" id="c" value=360>
+					    <label class="label" for="c">
+					    	<span class="text">Every 6 hours</span>
+					    	<div class="indicator"></div>
+					    </label>
+					</div>
+					<div class="wrapper">
+					    <input class="state" type="radio" name="app" id="d" value=720>
+					    <label class="label" for="d">
+					    	<span class="text">Every 12 hours</span>
+					    	<div class="indicator"></div>
+					    </label>
+					</div>
+					<div class="wrapper">
+					    <input class="state" type="radio" name="app" id="e" value=1440>
+					    <label class="label" for="e">
+					    	<span class="text">Every 24 hours</span>
+					    	<div class="indicator"></div>
+					    </label>
+					</div>
+					<div class="wrapper">
+					    <input class="state" type="radio" name="app" id="f" value="manually">
+					    <label class="label" for="f">
+					    	<span class="text">Update manually</span>
+					    	<div class="indicator"></div>
+					    </label>
+					</div>
+					
+				</div>
 			</div>
 		</div>
+	<footer>
+		<div class="addCityBtn">
+			<img src="icons/svg/plus.svg" alt="">
+		</div>
+		<div class="refreshBtn">
+			<img src="icons/svg/rotate.svg" alt="">
+		</div>
+	</footer>
 	</div>
 
-
-	<script src="app.js"></script>
+	<script src="weather.js"></script>
 </body>
 </html>
